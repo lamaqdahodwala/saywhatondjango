@@ -13,6 +13,7 @@ class Detail(DetailView):
     template_name='reading.html'
 
 def newpost(req):
-    if req.method == 'POST': 
+    if req.method=='POST':
         ...
-    return render(req, 'newpost.html')
+    elif req.method=='GET':
+        ...
