@@ -11,3 +11,8 @@ class Index(ListView):
 class Detail(DetailView):
     model = Post
     template_name='reading.html'
+
+def newpost(req):
+    if req.method == 'POST': 
+        ...
+    return render(req, 'newpost.html')
