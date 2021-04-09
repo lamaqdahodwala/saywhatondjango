@@ -11,14 +11,23 @@
     <ul>
 
         {% for post in object_list %}
-            <li>
-
-                <a href="{% url 'detail' post.pk %"></a>{{ post.title }}: by
-                {{ post.author }}
-                <br>
-                {{ post.body }}
-            </li>
+            <!--
+                <li>
+                    
+                    <a href="{% url 'detail' post.pk %"></a>{{ post.title }}: by
+                    {{ post.author }}
+                    <br>
+                    {{ post.body }}
+                </li>
+            -->
+            <p>
+                <a href="{% url 'detail' post.pk %}">
+                    {{post.title}}
+                </a>
+                written by: {{post.author}}
+            </p>
         {% endfor %}
     </ul>
+    <a href="https://apple.com/">Btw</a>
 </body>
 </html>
