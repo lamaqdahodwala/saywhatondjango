@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from .forms import PostModelForm
 # Create your views here.
 
 class Index(ListView):
@@ -12,8 +13,6 @@ class Detail(DetailView):
     model = Post
     template_name='reading.html'
 
-def newpost(req):
-    if req.method=='POST':
-        ...
-    elif req.method=='GET':
-        ...
+class NewPost(CreateView):
+    model = Post
+    template_name='newpost.html'
