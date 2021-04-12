@@ -4,7 +4,7 @@
         {% csrf_token %}
         <textarea name="" id="" cols="20" rows="10" placeholder="Title"></textarea>
         <br>
-        <textarea name="" id="" cols="10" rows="2" placeholder="Author"></textarea>
+        <textarea name="" id="" cols="10" rows="2" placeholder="Author" disabled>{{user.username}}</textarea>
         <br><br><br>
         <textarea name="" id="" cols="30" rows="10" placeholder="Actual Story"></textarea>
         <button type="submit">Post it!</button>
